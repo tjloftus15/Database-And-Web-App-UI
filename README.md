@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
 
+## About My Database
+
+
+## About My User Interface
+
+There are multiple pages. The different pages all have their own folder under src -> app. There is a page for All Drinkers, all Bars, all Items. The Drinkers page is stored in 'drinkers', the Bars page is stored under 'welcome', the Items page is stored under 'items'. Each page was a table, which listed that table of the database. For example, if on the Drinkers page, you could see all drinkers stored in the dtaabase and all information about that drinker. Each drinkers name was an HTTP link, which brought you to a table that showed many fact about the drinker, including spending habits and products (drinks/items) that they liked, in bar graphs. The same can be said about the bars and items pages, which show details of the bar/item when it's name was clicked. The corresponding pages can be found under 'drinker-details', 'bar-details', and 'item-details'. There is also a modifications page, which took user input (in MySQL language) in order to modify the database. The database then decide to accept/reject based upon key restraints and enforced constraints on the data.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
