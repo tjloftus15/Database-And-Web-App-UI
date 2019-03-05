@@ -4,6 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## About My Database
 
+My database is on the AWS cloud. I have removed the URL and key for safety reasons. The schema is Bar-Beer-Drinker. There are 4 entity tables and 4 relational tables. There is the drinker, item, bar, and bill tables, which are the entity ones. Then, there are the Likes, Frequents, Sells, and Transaction tables, whihc are the relational tables. In summary, the database has a collection of people, where the people live, bars, where the bars are located, things the bar sells, bills at at the bars, what drinks people like, what bars people frequent, what items bars sell, and information about the bills, called transactions.
 
 ## About My User Interface
 
