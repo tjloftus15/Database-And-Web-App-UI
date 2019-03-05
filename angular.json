@@ -23,9 +23,19 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/primeng.css",
+              "node_modules/primeng/resources/themes/nova-light/theme.css",
+              "node_modules/highcharts/css/highcharts.css",
               "src/styles.css"
+
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/highcharts/highcharts.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -57,7 +67,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "bar-beer-drinker-ui:build"
+            
+            "browserTarget": "bar-beer-drinker-ui:build",
+            "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
             "production": {

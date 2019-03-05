@@ -1,0 +1,72 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">{{ barName }}</h1>
+    <p class="bar-details" *ngIf="barDetails">
+      {{ barDetails?.address}}<span *ngIf="barDetails.addres && barDetails.state">|</span>, {{barDetails?.state}}
+      <br>
+      {{barDetails?.openHour}} - {{barDetails?.closeHour}}
+    </p>
+      
+  </div>
+</div>
+
+<div class ="containter">
+    <br>
+    <div id="Table1"></div>
+</div>
+
+<br><br>
+
+<div class ="containter">
+    <br>
+    <div id="Table2"></div>
+</div>
+<br><br>
+<div class ="containter">
+    <br>
+    <div id="Table3"></div>
+</div>
+<br><br>
+
+<div class ="containter">
+    <br>
+    <div id="Table4"></div>
+</div>
+<br><br>
+
+<div class ="containter">
+    <br>
+    <div id="Table5"></div>
+</div>
+<br><br>
+
+<div class="container">
+    <h2 class="text-center font-weight-light">Menu</h2>
+    <br>
+    <p-table [value]="menu">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Manufacturer</th>
+                <th>Price</th>
+                <th>Likes</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-i>
+            <tr>
+                <td><a routerLink="/items/{{ i.item }}">
+                  {{i.item}}
+                </a></td>
+                <td>{{ i.type }}</td>
+                <td>{{ i.manufacturer }}</td>
+                <td>{{ i.price | currency }}</td>
+                <td>{{ i.likes }}</td>
+
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+
+
+<br><br>

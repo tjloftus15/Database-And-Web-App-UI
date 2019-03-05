@@ -1,0 +1,32 @@
+
+
+<div class="jumbotron jumbrotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Modifications Page</h1>
+      <p class="lead">PLEASE NOTE: Be sure to ONLY use DELETE/INSERT/UPDATE commands, as other actions will fail. Be sure to enter all
+        key words, like SET or VALUES, in all capitalized letters ONLY.
+      </p>
+    </div>
+  </div>
+  <br>
+<br><br>
+<input itype="text" id="str" [(ngModel)]="str"/> <output id = "result" [(ngModel)]="result">
+  <br>
+<button id="b" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" (click)="sendValues($event)">Perform Query</button> 
+
+<br><br>
+<div class="container">
+  <p-table [value]="DATA">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Query Result</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-D>
+      <tr>
+        <td>{{D.output}}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+

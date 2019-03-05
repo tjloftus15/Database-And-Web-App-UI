@@ -1,0 +1,102 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">{{drinkerName}}</h1>
+    <p class="drinker-details" *ngIf="drinkerDetails">
+      {{drinkerDetails.address}}, {{drinkerDetails.state}}
+      <br>
+    </p>
+  </div>
+</div>
+<br><br>
+<div class ="containter">
+    <br>
+    <div id="Table1"></div>
+</div>
+<br><br>
+
+<div class ="containter">
+    <br>
+    <div id="Table2"></div>
+</div>
+<br><br>
+
+<div class ="containter">
+    <br>
+    <div id="Table3"></div>
+</div>
+<br><br>
+
+<div class ="containter">
+    <br>
+    <div id="Table4"></div>
+</div>
+<br><br>
+
+<div class ="containter">
+    <br>
+    <div id="Table5"></div>
+</div>
+<br><br>
+
+<div class="container">
+  <h2 class="text-center font-weight-light">Transactions</h2>
+  <br>
+  <p-table [value]="transactions">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Time</th>
+        <th>Transaction ID</th>
+        <th>Bar</th>
+        <th>Item Bought</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        
+        <th>Date</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-i>
+      <tr>
+        <td>{{ i.time }}</td>
+        <td>{{i.id}}</td>
+        <td><a routerLink="/bars/{{ i.bar }}">
+           {{i.bar}}
+           </a></td>
+        <td><a routerLink="/items/{{i.item}}"> {{i.item}}</a></td>
+        <td>{{ i.quantity }}</td>
+        <td>{{ i.total | currency }}</td>
+        
+        <td>{{ i.date }}</td>
+  
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+  
+  <br><br>
+
+<br><br>
+<div class="container">
+  <h2 class="text-center font-weight-light">Likes</h2>
+  <br>
+  <p-table [value]="likes">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-i>
+      <tr>
+        <td><a routerLink="/items/{{ i.name }}">
+          {{i.name}}
+          </a></td>
+        <td>{{ i.type }}</td>
+
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+
+<br><br>
+
+
